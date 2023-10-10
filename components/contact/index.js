@@ -1,4 +1,24 @@
+import { useState } from 'react';
+
 export default function ContactForm() {
+  const [formInput, setFormInput] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const { name, email, subject, message } = formInput;
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+
+    setFormInput({
+      ...formInput,
+      [name]: value,
+    });
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
   }
@@ -7,15 +27,22 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit}>
       <div>
         <label>Name</label>
-        <input type='text' />
+        <input
+          type='text'
+          id='name'
+          name='name'
+          value={name}
+          onChange={handleChange}
+          required
+        />
       </div>
       <div>
         <label htmlFor='email'>Email</label>
         <input
           type='email'
           id='email'
-          name=''
-          value={emailInput}
+          name='email'
+          value={email}
           onChange={handleChange}
           required
         />
@@ -25,8 +52,8 @@ export default function ContactForm() {
         <input
           type='text'
           id='subject'
-          name=''
-          value={subjectInput}
+          name='subject'
+          value={subject}
           onChange={handleChange}
           required
         />
@@ -36,8 +63,8 @@ export default function ContactForm() {
         <textarea
           id='message'
           rows='5'
-          name='messageInput'
-          value={messageInput}
+          name='message'
+          value={message}
           onChange={handleChange}
           required
         ></textarea>
