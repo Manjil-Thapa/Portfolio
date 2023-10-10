@@ -1,3 +1,6 @@
-export default function Home() {
-  return <main>Home page</main>;
+import ContactForm from '@/components/contact';
+import MainNavigation from '@/components/layout/mainNavigation';
+
+export default function HomePage() {
+  return <ContactForm />;
 }
