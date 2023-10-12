@@ -25,6 +25,8 @@ export default function ContactForm() {
 
   return (
     <div className='w-full max-w-xs'>
+      <h2>Lets get in touch!</h2>
+      <p>I am currently open for new opportunities. </p>
       <form
         onSubmit={handleSubmit}
         className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'
@@ -54,6 +56,7 @@ export default function ContactForm() {
             Email
           </label>
           <input
+            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             type='email'
             id='email'
             name='email'
@@ -63,8 +66,14 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor='subject'>Subject</label>
+          <label
+            htmlFor='subject'
+            className='block text-gray-700 text-sm font-bold mb-2'
+          >
+            Subject
+          </label>
           <input
+            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             type='text'
             id='subject'
             name='subject'
@@ -74,8 +83,14 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor='message'>Message</label>
+          <label
+            htmlFor='message'
+            className='block text-gray-700 text-sm font-bold mb-2'
+          >
+            Message
+          </label>
           <textarea
+            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             id='message'
             rows='5'
             name='message'
@@ -85,7 +100,9 @@ export default function ContactForm() {
           ></textarea>
         </div>
 
-        <button>Send</button>
+        <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
+          Send
+        </button>
       </form>
     </div>
   );
