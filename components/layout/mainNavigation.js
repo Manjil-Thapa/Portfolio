@@ -6,9 +6,15 @@ export default function MainNavigation() {
       <div>Manjil Thapa</div>
       <nav>
         <ul>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <Link href='/'>
+            <li>About</li>
+          </Link>
+          <Link href='/'>
+            <li>Projects</li>
+          </Link>
+          <Link href='/'>
+            <li>Contact</li>
+          </Link>
         </ul>
       </nav>
     </header>
