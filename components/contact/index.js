@@ -9,6 +9,7 @@ export default function ContactForm() {
   });
 
   const { name, email, subject, message } = formInput;
+  
 
   function handleChange(event) {
     const { name, value } = event.target;
