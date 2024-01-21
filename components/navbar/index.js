@@ -1,25 +1,29 @@
+const { default: Link } = require('next/link');
+
 const Navbar = () => {
   return (
     <nav>
       <div>
         <p>
-          <a>Manjil</a>
+          <Link href='/'>Manjil</Link>
         </p>
       </div>
       <ul>
         <li>
-          <a>Home</a>
+          <Link href='/'>Home</Link>
         </li>
         <li>
-          <a>Projects</a>
+          <Link href='/projects'></Link>
         </li>
         <li>
-          <a>About</a>
+          <Link href='/about'></Link>
         </li>
         <li>
-          <a>Contact</a>
+          <Link href='/contact'>Contact</Link>
         </li>
       </ul>
     </nav>
   );
 };
+
+export default Navbar;
