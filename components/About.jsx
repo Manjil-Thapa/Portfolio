@@ -1,4 +1,4 @@
-export default function AboutMe() {
+const About = () => {
   return (
     <section>
       <h2>About Me</h2>
@@ -12,4 +12,6 @@ export default function AboutMe() {
       </p>
     </section>
   );
-}
+};
+
+export default About;

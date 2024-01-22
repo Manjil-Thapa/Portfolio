@@ -1,22 +1,21 @@
-const { default: Link } = require('next/link');
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav>
-      <div>
-        <p>
-          <Link href='/'>Manjil</Link>
-        </p>
-      </div>
+    <nav className='flexBetween max-container padding-container'>
+      <Link href='/'>
+        <Image src='Logo.svg' alt='logo' width={300} height={40} />
+      </Link>
       <ul>
         <li>
           <Link href='/'>Home</Link>
         </li>
         <li>
-          <Link href='/projects'></Link>
+          <Link href='/projects'>Projects</Link>
         </li>
         <li>
-          <Link href='/about'></Link>
+          <Link href='/about'>About</Link>
         </li>
         <li>
           <Link href='/contact'>Contact</Link>
