@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className='flexBetween max-container padding-container'>
+    <nav className='flex justify-between max-container padding-container'>
       <Link href='/'>
         <Image src='Logo.svg' alt='logo' width={300} height={40} />
       </Link>
-      <ul>
+      <ul className='flex gap-2 items-center'>
         <li>
           <Link href='/'>Home</Link>
         </li>
