@@ -1,6 +1,6 @@
-import Card from '../Card';
+import Card from './Card';
 
-export default function Project() {
+const Projects = () => {
   return (
     <section>
       <h2>PROJECTS</h2>
@@ -10,4 +10,6 @@ export default function Project() {
       <Card />
     </section>
   );
-}
+};
+
+export default Projects;
