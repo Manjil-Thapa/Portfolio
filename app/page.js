@@ -7,13 +7,13 @@ import Socials from '@/components/Socials';
 
 export default function Home() {
   return (
-    <div className='text-3xl '>
+    <div className='relative'>
       <Hero />
       {/* <Sidebar /> */}
       {/* <CarouselProject /> */}
       {/* <CardProject /> */}
       {/* <Contact /> */}
-      {/* <Socials /> */}
+      <Socials />
     </div>
   );
 }
