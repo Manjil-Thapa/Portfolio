@@ -1,3 +1,5 @@
+'use client';
+
 const { useState } = require('react');
 const { default: Footer } = require('./Footer');
 
