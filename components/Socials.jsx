@@ -1,14 +1,18 @@
 import Link from 'next/link';
-import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaLinkedin, FaFacebookSquare, FaGithubSquare } from 'react-icons/fa';
+import { FaSquareXTwitter } from 'react-icons/fa6';
 
 const Socials = () => {
   return (
-    <nav>
+    <nav className='fixed top-7/20 '>
       <ul>
         {socials.map(social => {
           return (
-            <li key={social.title} className='py-1'>
+            <li
+              key={social.title}
+              className='py-1 border-solid border-transparent border-2 max-w-min 
+              hover:translate-x-3.5 transition duration-150'
+            >
               <Link href={social.href} target='_blank'>
                 {social.icon}
               </Link>
@@ -25,18 +29,18 @@ export default Socials;
 const socials = [
   {
     title: 'facebook',
-    icon: <FaFacebook size={40} color='#316FF6' />,
+    icon: <FaFacebookSquare size={40} color='#316FF6' />,
     href: 'https://facebook.com/zilthapa/',
   },
   {
     title: 'twitter',
-    icon: <FaXTwitter size={40} />,
-    href: 'https://https://twitter.com/manjilthapa',
+    icon: <FaSquareXTwitter size={40} />,
+    href: 'https://twitter.com/manjilthapa',
   },
   {
     title: 'github',
-    icon: <FaGithub size={40} />,
-    href: '/https://https://github.com/Manjil-Thapa',
+    icon: <FaGithubSquare size={40} />,
+    href: 'https://github.com/Manjil-Thapa',
   },
   {
     title: 'linkedIn',
