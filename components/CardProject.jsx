@@ -19,5 +19,3 @@ const CardProject = () => {
 };
 
 export default CardProject;
-
-import * as React from 'react';
