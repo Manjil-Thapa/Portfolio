@@ -11,15 +11,16 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { Badge } from './ui/badge';
 
 const FeaturedProjects = () => {
   return (
-    <section className='max-w-screen-xl m-auto'>
+    <section className='max-w-screen-xl m-auto p-6' id='projects'>
       <div>
         <h2 className='text-center pb-4 text-3xl font-bold'>Featured Projects</h2>
-        <div className='grid grid-cols-2 gap-2'>
-          {featuredProjects.map(project => (
-            <React.Fragment key={project.title}>
+        <div className='grid grid-rows-4 gap-10'>
+          {featuredProjects.map((project, index) => (
+            <div key={index} className='grid grid-cols-2 gap-x-4'>
               <AspectRatio ratio={16 / 9}>
                 <Link href={project.link} target='_blank'>
                   <Image
@@ -27,6 +28,7 @@ const FeaturedProjects = () => {
                     alt={project.title}
                     fill
                     className='rounded-md hover:scale-[0.99] ease-in-out duration-200'
+                    objectFit='cover'
                   />
                 </Link>
               </AspectRatio>
@@ -37,30 +39,25 @@ const FeaturedProjects = () => {
                 <p className='bg-cyan-900 text-neutral-300 p-7 rounded-md text-end'>
                   {project.description}
                 </p>
-                <ul className='flex gap-2 justify-end my-4'>
-                  {project.stack.map((icon, index) => (
+                <ul className='flex gap-3 justify-end my-4'>
+                  {project.stackText.map((stack, index) => (
                     <li key={index}>
-                      <TooltipProvider delayDuration={200}>
-                        <Tooltip>
-                          <TooltipTrigger asChild>{icon}</TooltipTrigger>
-                          <TooltipContent>
-                            <p>{project.stackText[index]}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
+                      <Badge className='bg-[darkCyan] text-[ghostWhite] px-3 py-1 pointer-events-none'>
+                        {stack}
+                      </Badge>
                     </li>
                   ))}
                 </ul>
                 <div className='flex justify-end gap-2'>
                   <Link href={project.link} target='_blank'>
-                    <FaGithub size={25} />
+                    <FaGithub size={25} title='Github' />
                   </Link>
                   <Link href='https://github.com/Manjil-Thapa' target='_blank'>
-                    <VscCode size={25} />
+                    <VscCode size={25} title='Live version' />
                   </Link>
                 </div>
               </div>
-            </React.Fragment>
+            </div>
           ))}
         </div>
       </div>

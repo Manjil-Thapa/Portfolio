@@ -17,31 +17,39 @@ import {
 
 const About = () => {
   return (
-    <section className='h-screen p-20'>
-      <h2 className='text-center mb-4'>About Me</h2>
+    <section className='h-screen p-20 max-w-screen-2xl m-auto' id='about'>
+      <h2 className='text-center mb-4 text-5xl font-bold'>About Me</h2>
       <div className='grid grid-cols-2 gap-12'>
         <div className='h-full'>
-          <h3>WHAT I DO</h3>
-          <p>
-            I&apos;m a Frontend Web Developer building the Front-end of Websites and
-            Web Applications that leads to the success of the overall product. Check
-            out some of my work in the Projects section. I also like sharing content
-            related to the stuff that I have learned over the years in Web
-            Development so it can help other people of the Dev Community. Feel free
-            to Connect or Follow me on my Linkedin where I post useful content
-            related to Web Development and Programming I&apos;m open to Job
-            opportunities where I can contribute, learn and grow. If you have a good
-            opportunity that matches my skills and experience then don&apos;t
-            hesitate to contact me.
+          <h3 className='pb-10 text-2xl text-center'>WHAT I DO</h3>
+          <p className='text-xl leading-relaxed pb-5'>
+            Hi, I&apos;m Manjil. I am a Frontend Developer based in Brisbane, QLD. I
+            enjoy being given challenging, visually-pleasing designs and making them
+            a reality. The process of tearing an idea down into its smallest
+            components, learning, and figuring out how to put those pieces together,
+            all while making it performant, excites me.
+          </p>
+          <p className='text-xl leading-relaxed pb-5'>
+            Right now, I&apos;m working as a frontend engineer at Nebo, an
+            advertising agency based in Atlanta, where I contribute to building
+            accessible, human-centered projects.
+          </p>
+          <p className='text-xl leading-relaxed pb-5'>
+            Apart from web development, I do cinematography and make short cinematic
+            music videos on YouTube. It&apos;s very fulfilling for me and has given a
+            creative-outlet to my avocation.
           </p>
         </div>
         <div>
-          <h3>SKILLS & LANGUAGES</h3>
-          <ul className='flex gap-5'>
+          <h3 className='pb-10 text-2xl text-center'>SKILLS & LANGUAGES</h3>
+          <ul className='grid grid-cols-4 grid-rows-3 gap-5'>
             {skills.map(skill => (
-              <li key={skill.name} className='w-[85px]'>
+              <li
+                key={skill.name}
+                className='flex flex-col justify-center items-center'
+              >
                 {skill.icon}
-                <span>{skill.name}</span>
+                <span className='pointer-events-none'>{skill.name}</span>
               </li>
             ))}
           </ul>
@@ -103,3 +111,18 @@ const skills = [
     name: 'Git',
   },
 ];
+
+{
+  /* <p>
+I&apos;m a Frontend Web Developer building the Front-end of Websites and
+Web Applications that leads to the success of the overall product. Check
+out some of my work in the Projects section. I also like sharing content
+related to the stuff that I have learned over the years in Web
+Development so it can help other people of the Dev Community. Feel free
+to Connect or Follow me on my Linkedin where I post useful content
+related to Web Development and Programming I&apos;m open to Job
+opportunities where I can contribute, learn and grow. If you have a good
+opportunity that matches my skills and experience then don&apos;t
+hesitate to contact me.
+</p> */
+}
