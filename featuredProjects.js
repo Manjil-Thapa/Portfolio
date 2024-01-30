@@ -6,7 +6,7 @@ import React from 'react';
 export const featuredProjects = [
   {
     title: 'Little Lemon Website',
-    image: '/project-placeholder.png',
+    image: '/little-lemon-thumbnail.png',
     description:
       'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
     link: 'https://github.com/Manjil-Thapa/little-lemon-capstone',
@@ -19,7 +19,7 @@ export const featuredProjects = [
   },
   {
     title: 'YelpCamp',
-    image: '/project-placeholder.png',
+    image: '/yelpcamp-thumbnail.png',
     description:
       'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
     link: 'https://github.com/Manjil-Thapa/yelpcamp',
@@ -32,8 +32,8 @@ export const featuredProjects = [
     stackText: ['JavaScript', 'MongoDB', 'ExpressJS', 'Mapbox API'],
   },
   {
-    title: 'Mangata-Gallo Webpage',
-    image: '/project-placeholder.png',
+    title: 'Swipe',
+    image: '/swipe-thumbnail.png',
     description:
       'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
     link: 'https://github.com/Manjil-Thapa/mangata-gallo-web-page',
@@ -45,8 +45,8 @@ export const featuredProjects = [
     stackText: ['HTML', 'CSS', 'JavaScript'],
   },
   {
-    title: 'Etch-A-Sketch',
-    image: '/project-placeholder.png',
+    title: 'Mangata-Gallo Webpage',
+    image: '/mangata-thumbnail.png',
     description:
       'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
     link: 'https://github.com/Manjil-Thapa/odin-Etch-A-Sketch',

@@ -20,8 +20,16 @@ const FeaturedProjects = () => {
         <h2 className='text-center pb-4 text-3xl font-bold'>Featured Projects</h2>
         <div className='grid grid-rows-4 gap-10'>
           {featuredProjects.map((project, index) => (
-            <div key={index} className='grid grid-cols-2 gap-x-4'>
-              <AspectRatio ratio={16 / 9}>
+            <div
+              key={index}
+              className={
+                'grid grid-cols-2 gap-x-4 ' + (index % 2 === 0 ? 'even' : 'odd')
+              }
+            >
+              <AspectRatio
+                ratio={16 / 9}
+                className={index % 2 !== 0 ? 'col-start-2' : ''}
+              >
                 <Link href={project.link} target='_blank'>
                   <Image
                     src={project.image}
@@ -32,14 +40,22 @@ const FeaturedProjects = () => {
                   />
                 </Link>
               </AspectRatio>
-              <div>
-                <h3 className='text-end text-2xl font-semibold pb-10'>
+              <div className={index % 2 !== 0 ? 'row-start-1 col-start-1' : ''}>
+                <h3
+                  className={`text-2xl font-semibold pb-10 ${
+                    index % 2 === 0 ? 'text-end' : ''
+                  }`}
+                >
                   {project.title}
                 </h3>
                 <p className='bg-cyan-900 text-neutral-300 p-7 rounded-md text-end'>
                   {project.description}
                 </p>
-                <ul className='flex gap-3 justify-end my-4'>
+                <ul
+                  className={`flex gap-3 my-4 ${
+                    index % 2 !== 0 ? 'justify-start' : 'justify-end'
+                  }`}
+                >
                   {project.stackText.map((stack, index) => (
                     <li key={index}>
                       <Badge className='bg-[darkCyan] text-[ghostWhite] px-3 py-1 pointer-events-none'>
@@ -48,7 +64,11 @@ const FeaturedProjects = () => {
                     </li>
                   ))}
                 </ul>
-                <div className='flex justify-end gap-2'>
+                <div
+                  className={`flex gap-2 ${
+                    index % 2 !== 0 ? 'justify-start' : 'justify-end'
+                  }`}
+                >
                   <Link href={project.link} target='_blank'>
                     <FaGithub size={25} title='Github' />
                   </Link>
