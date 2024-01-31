@@ -5,26 +5,20 @@ import { FaGithub } from 'react-icons/fa';
 import { VscCode } from 'react-icons/vsc';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { featuredProjects } from '@/featuredProjects';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
 import { Badge } from './ui/badge';
 
 const FeaturedProjects = () => {
   return (
-    <section className='max-w-screen-xl m-auto p-6' id='projects'>
+    <section className='max-w-screen-xl m-auto p-20' id='projects'>
       <div>
-        <h2 className='text-center pb-4 text-3xl font-bold'>Featured Projects</h2>
-        <div className='grid grid-rows-4 gap-10'>
+        <h2 className='text-center pb-8 text-3xl font-bold'>Featured Projects</h2>
+        <div className='grid grid-rows-4 gap-20'>
           {featuredProjects.map((project, index) => (
             <div
               key={index}
-              className={
-                'grid grid-cols-2 gap-x-4 ' + (index % 2 === 0 ? 'even' : 'odd')
-              }
+              className={`grid grid-cols-2 gap-x-4 ${
+                index % 2 === 0 ? 'even' : 'odd'
+              }`}
             >
               <AspectRatio
                 ratio={16 / 9}
@@ -42,13 +36,17 @@ const FeaturedProjects = () => {
               </AspectRatio>
               <div className={index % 2 !== 0 ? 'row-start-1 col-start-1' : ''}>
                 <h3
-                  className={`text-2xl font-semibold pb-10 ${
+                  className={`text-2xl font-semibold pb-6 ${
                     index % 2 === 0 ? 'text-end' : ''
                   }`}
                 >
                   {project.title}
                 </h3>
-                <p className='bg-cyan-900 text-neutral-300 p-7 rounded-md text-end'>
+                <p
+                  className={`bg-[darkslategrey] text-neutral-300 p-7 rounded-md  ${
+                    index % 2 !== 0 ? 'text-start' : 'text-end'
+                  }`}
+                >
                   {project.description}
                 </p>
                 <ul
