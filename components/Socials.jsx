@@ -4,7 +4,7 @@ import { FaSquareXTwitter } from 'react-icons/fa6';
 
 const Socials = () => {
   return (
-    <nav className='fixed top-7/20 '>
+    <nav className='fixed top-[42%]'>
       <ul>
         {socials.map(social => {
           return (
@@ -28,6 +28,11 @@ export default Socials;
 
 const socials = [
   {
+    title: 'github',
+    icon: <FaGithubSquare size={40} />,
+    href: 'https://github.com/Manjil-Thapa',
+  },
+  {
     title: 'facebook',
     icon: <FaFacebookSquare size={40} color='#316FF6' />,
     href: 'https://facebook.com/zilthapa/',
@@ -38,13 +43,8 @@ const socials = [
     href: 'https://twitter.com/manjilthapa',
   },
   {
-    title: 'github',
-    icon: <FaGithubSquare size={40} />,
-    href: 'https://github.com/Manjil-Thapa',
-  },
-  {
     title: 'linkedIn',
-    icon: <FaLinkedin size={40} />,
+    icon: <FaLinkedin size={40} color='#0077b5' />,
     href: 'https://au.linkedin.com/in/manjil-thapa-306654142',
   },
 ];
