@@ -1,78 +1,53 @@
 'use client';
 
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from '@/components/ui/navigation-menu';
-import Image from 'next/image';
-import { forwardRef } from 'react';
-
-const navMenu = [
-  {
-    title: 'Projects',
-    href: '/projects',
-  },
-  {
-    title: 'About',
-    href: '/about',
-  },
-  {
-    title: 'Contact',
-    href: '/contact',
-  },
-];
+import Link from 'next/link';
+import { useState, useEffect, useRef } from 'react';
 
 const Navbar = () => {
+  const [navHidden, setNavHidden] = useState(false);
+  const [padding, setPadding] = useState('py-8 px-8');
+  const prevScrollPos = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const isVisible = prevScrollPos.current > currentScrollPos;
+
+      setNavHidden(!isVisible);
+      prevScrollPos.current = currentScrollPos;
+
+      currentScrollPos === 0 ? setPadding('py-8 px-8') : setPadding('py-6 px-8');
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className='flex max-w-screen-xl m-auto justify-between'>
-      <Image src='Logo.svg' alt='logo' width={200} height={40} />
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className='w-[400px] gap-3 p-4 md:w-[200px] md:grid-cols-2 '>
-                {navMenu.map(navItem => (
-                  <ListItem
-                    key={navItem.title}
-                    title={navItem.title}
-                    href={navItem.href}
-                  >
-                    {navItem.title}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+    <nav
+      className={`flex justify-between fixed top-0 inset-x-0 w-full mx-auto my-2 max-w-screen-2xl transition-all duration-500 ease-in-out 
+      z-50 ${padding} ${navHidden && 'transform -translate-y-full'}`}
+    >
+      <h2>
+        <Link href='/'>Manjil</Link>
+      </h2>
+
+      <ul className='flex items-center gap-3'>
+        <li>
+          <Link href='#projects'>Projects</Link>
+        </li>
+        <li>
+          <Link href='#about'>About</Link>
+        </li>
+        <li>
+          <Link href='#contact'>Contact</Link>
+        </li>
+      </ul>
     </nav>
   );
 };
 
 export default Navbar;
-
-const ListItem = forwardRef((props, ref) => {
-  const { className, title, children, ...rest } = props;
-
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={`block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors
-          hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground ${className}`}
-          {...rest}
-        >
-          <div className='text-sm font-medium leading-none'>{title}</div>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-
-ListItem.displayName = 'ListItem';
