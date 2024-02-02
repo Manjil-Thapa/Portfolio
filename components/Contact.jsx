@@ -1,10 +1,6 @@
 'use client';
 
-import Link from 'next/link';
 import { Button } from './ui/button';
-
-const { useState } = require('react');
-const { default: Footer } = require('./Footer');
 
 // const Contact = () => {
 //   const [formData, setFormData] = useState({
@@ -65,6 +61,10 @@ const { default: Footer } = require('./Footer');
 // };
 
 const Contact = () => {
+  const handleClick = event => {
+    event.preventDefault();
+    window.open('mailto:manjil.thapa.mgr@gmail.com', '_blank');
+  };
   return (
     <section
       className='flex flex-col justify-center items-center h-screen p-20'
@@ -77,8 +77,8 @@ const Contact = () => {
         open. Whether you have a question or just want to say hi, I&apos;ll try my
         best to get back to you.
       </p>
-      <Button variant='secondary'>
-        <Link href='mailto: manjil.thapa.mgr@gmail.com'>Get In Contact</Link>
+      <Button variant='secondary' onClick={handleClick}>
+        Get In Contact
       </Button>
     </section>
   );
