@@ -30,7 +30,7 @@ const FeaturedProjects = () => {
                     alt={project.title}
                     fill
                     className='rounded-md hover:scale-[0.99] ease-in-out duration-200'
-                    objectFit='cover'
+                    style={{ objectFit: 'cover' }}
                   />
                 </Link>
               </AspectRatio>
