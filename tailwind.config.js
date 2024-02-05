@@ -17,6 +17,11 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sora: ['var(--font-sora)'],
+        jura: ['var(--font-jura)'],
+        'work-sans': ['var(--font-work-sans)'],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

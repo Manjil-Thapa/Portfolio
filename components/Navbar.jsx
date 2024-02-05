@@ -20,11 +20,13 @@ const Navbar = () => {
       prevScrollPos.current = currentScrollPos;
 
       if (currentScrollPos === 0) {
-        setPadding('py-2');
-        setBoxShadow('');
-        setNavTransition(
-          'transform 0.2s ease-in-out, padding 0.2s ease-in-out, box-shadow 0.2s ease-in-out'
-        );
+        setTimeout(() => {
+          setPadding('py-2');
+          setBoxShadow('');
+          setNavTransition(
+            'transform 0.2s ease-in-out, padding 0.2s ease-in-out, box-shadow 0.2s ease-in-out'
+          );
+        }, 500);
       } else {
         setPadding('');
         setBoxShadow(
@@ -60,11 +62,11 @@ const Navbar = () => {
       >
         <h2>
           <Link href='/'>
-            <Image src='/logo.png' width={100} height={100} alt='logo' />
+            <Image src='/main-logo.svg' width={100} height={100} alt='logo' />
           </Link>
         </h2>
 
-        <ul className='flex items-center gap-3'>
+        <ul className='flex items-center gap-3 font-sora'>
           <li>
             <Link href='#projects'>Projects</Link>
           </li>

@@ -1,7 +1,12 @@
-import { Inter } from 'next/font/google';
+import { Work_Sans, Sora, Jura } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const sora = Sora({ subsets: ['latin'], variable: '--font-sora' });
+const jura = Jura({ subsets: ['latin'], variable: '--font-jura' });
+const work_sans = Work_Sans({
+  subsets: ['latin'],
+  variable: '--font-work-sans',
+});
 
 export const metadata = {
   title: 'Manjil Thapa | Frontend Developer',
@@ -10,10 +15,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en' className='scroll-smooth'>
-      <body
-        className={`${inter.className} bg-gradient-to-b from-[#2e2065] to-[#0F172A] text-white`}
-      >
+    <html
+      lang='en'
+      className={`${sora.variable} ${jura.variable} ${work_sans.variable} scroll-smooth`}
+    >
+      <body className='bg-gradient-to-b from-[#2e2065] to-[#0F172A] text-white'>
         <main className='relative overflow-hidden '>{children}</main>
       </body>
     </html>

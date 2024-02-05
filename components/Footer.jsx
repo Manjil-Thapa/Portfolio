@@ -18,20 +18,24 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className='flex flex-col justify-center items-center p-4'>
+    <footer className='flex flex-col justify-center items-center p-4 font-jura'>
       <h4>
         Designed & built by
         <Link
           href='https://github.com/Manjil-Thapa'
           target='_blank'
-          className='ml-2 hover:text-cyan-300'
+          className='ml-1 hover:text-cyan-300 font-jura'
         >
           Manjil Thapa
         </Link>
       </h4>
       <p>
         Inspired by
-        <Link href='https://v4.brittanychiang.com/' target='_blank' className='pr-2'>
+        <Link
+          href='https://v4.brittanychiang.com/'
+          target='_blank'
+          className='pr-2 ml-1'
+        >
           Brittany Chiang
         </Link>
       </p>

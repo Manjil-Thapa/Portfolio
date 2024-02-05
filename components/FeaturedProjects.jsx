@@ -56,7 +56,7 @@ const FeaturedProjects = () => {
                 >
                   {project.stackText.map((stack, index) => (
                     <li key={index}>
-                      <Badge className='bg-[darkCyan] text-[ghostWhite] px-3 py-1 pointer-events-none'>
+                      <Badge className='bg-[darkCyan] text-[ghostWhite] px-3 py-1 pointer-events-none font-jura'>
                         {stack}
                       </Badge>
                     </li>

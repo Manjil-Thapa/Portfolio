@@ -49,7 +49,7 @@ const About = () => {
                 className='flex flex-col justify-center items-center'
               >
                 {skill.icon}
-                <span className='pointer-events-none'>{skill.name}</span>
+                <span className='pointer-events-none font-jura'>{skill.name}</span>
               </li>
             ))}
           </ul>
