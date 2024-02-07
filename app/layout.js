@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       lang='en'
       className={`${sora.variable} ${jura.variable} ${work_sans.variable} scroll-smooth`}
     >
-      <body className='bg-gradient-to-b from-[#2e2065] to-[#0F172A] text-white'>
+      <body className='bg-gradient-to-b bg-[#262a5c] text-white'>
         <main className='relative overflow-hidden '>{children}</main>
       </body>
     </html>

@@ -2,7 +2,7 @@
 
 import About from '@/components/About';
 import Contact from '@/components/Contact';
-import FeaturedProjects from '@/components/FeaturedProjects';
+import FeaturedProjects from '@/components/static/FeaturedProjects';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import LogoSvg from '@/components/LogoSvg';
