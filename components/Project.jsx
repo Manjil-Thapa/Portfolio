@@ -6,9 +6,9 @@ import Image from 'next/image';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Badge } from './ui/badge';
 import { FaGithub } from 'react-icons/fa';
-import { VscCode } from 'react-icons/vsc';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { BiLinkExternal } from 'react-icons/bi';
 
 const Project = ({ project, index }) => {
   const controls = useAnimation();
@@ -57,7 +57,7 @@ const Project = ({ project, index }) => {
           {project.title}
         </h3>
         <p
-          className={`bg-[darkslategrey] text-neutral-300 p-7 rounded-md  ${
+          className={`bg-sky-900 py-9 px-6 rounded-md  ${
             index % 2 !== 0 ? 'text-start' : 'text-end'
           }`}
         >
@@ -70,7 +70,7 @@ const Project = ({ project, index }) => {
         >
           {project.stackText.map((stack, index) => (
             <li key={index}>
-              <Badge className='bg-[darkCyan] text-[ghostWhite] px-3 py-1 pointer-events-none font-jura'>
+              <Badge className='bg-slate-600 px-3 py-1 pointer-events-none font-jura'>
                 {stack}
               </Badge>
             </li>
@@ -85,7 +85,7 @@ const Project = ({ project, index }) => {
             <FaGithub size={25} title='Github' />
           </Link>
           <Link href='https://github.com/Manjil-Thapa' target='_blank'>
-            <VscCode size={25} title='Live version' />
+            <BiLinkExternal size={25} title='Live version' />
           </Link>
         </div>
       </div>

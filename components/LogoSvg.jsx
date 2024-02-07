@@ -10,7 +10,7 @@ const LogoSvg = ({ onAnimationComplete }) => {
     const sequence = async () => {
       await controls.start({
         scale: 0,
-        transition: { duration: 0.2, delay: 3, ease: 'easeIn' },
+        transition: { duration: 0.2, delay: 2.8, ease: 'easeIn' },
       });
       onAnimationComplete();
     };
@@ -34,7 +34,7 @@ const LogoSvg = ({ onAnimationComplete }) => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{
             duration: 0.2,
-            delay: 2,
+            delay: 1.5,
             ease: 'easeIn',
           }}
         />
@@ -45,7 +45,7 @@ const LogoSvg = ({ onAnimationComplete }) => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{
             duration: 0.2,
-            delay: 2,
+            delay: 1.7,
             ease: 'easeIn',
           }}
         />
@@ -56,7 +56,7 @@ const LogoSvg = ({ onAnimationComplete }) => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{
             duration: 0.2,
-            delay: 2,
+            delay: 1.6,
             ease: 'easeIn',
           }}
         />
@@ -83,7 +83,7 @@ const LogoSvg = ({ onAnimationComplete }) => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{
             duration: 0.2,
-            delay: 2,
+            delay: 1.8,
             ease: 'easeIn',
           }}
         />
