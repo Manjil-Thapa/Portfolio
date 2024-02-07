@@ -1,4 +1,5 @@
 import { TbBrandNextjs } from 'react-icons/tb';
+import { motion } from 'framer-motion';
 import {
   FaHtml5,
   FaReact,
@@ -6,6 +7,7 @@ import {
   FaCss3Alt,
   FaNodeJs,
   FaGithub,
+  FaFigma,
 } from 'react-icons/fa';
 import {
   SiMongodb,
@@ -18,30 +20,44 @@ import {
 const About = () => {
   return (
     <section className='h-screen p-20 max-w-screen-2xl m-auto' id='about'>
-      <h2 className='text-center mb-4 text-5xl font-bold'>About Me</h2>
+      <h2 className='text-center mb-4 text-5xl font-bold pb-12'>About Me</h2>
       <div className='grid grid-cols-2 gap-12'>
         <div className='h-full'>
-          <h3 className='pb-10 text-2xl text-center'>WHAT I DO</h3>
-          <p className='text-xl leading-relaxed pb-5'>
+          <h3 className='pb-10 text-2xl font-medium text-center'>WHAT I DO</h3>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 1, delay: 0.6 } }}
+            className='text-xl leading-relaxed pb-5'
+          >
             Hi, I&apos;m Manjil. I am a Frontend Developer based in Brisbane, QLD. I
             enjoy being given challenging, visually-pleasing designs and making them
             a reality. The process of tearing an idea down into its smallest
             components, learning, and figuring out how to put those pieces together,
             all while making it performant, excites me.
-          </p>
-          <p className='text-xl leading-relaxed pb-5'>
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 1, delay: 0.6 } }}
+            className='text-xl leading-relaxed pb-5'
+          >
             Right now, I&apos;m working as a frontend engineer at Nebo, an
             advertising agency based in Atlanta, where I contribute to building
             accessible, human-centered projects.
-          </p>
-          <p className='text-xl leading-relaxed pb-5'>
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 1, delay: 0.6 } }}
+            className='text-xl leading-relaxed pb-5'
+          >
             Apart from web development, I do cinematography and make short cinematic
             music videos on YouTube. It&apos;s very fulfilling for me and has given a
             creative-outlet to my avocation.
-          </p>
+          </motion.p>
         </div>
         <div>
-          <h3 className='pb-10 text-2xl text-center'>SKILLS & LANGUAGES</h3>
+          <h3 className='pb-10 text-2xl font-medium text-center'>
+            SKILLS & LANGUAGES
+          </h3>
           <ul className='grid grid-cols-4 grid-rows-3 gap-5'>
             {skills.map(skill => (
               <li
@@ -109,6 +125,10 @@ const skills = [
   {
     icon: <FaGitAlt size={40} color='#f1502f' />,
     name: 'Git',
+  },
+  {
+    icon: <FaFigma size={40} />,
+    name: 'Figma',
   },
 ];
 
