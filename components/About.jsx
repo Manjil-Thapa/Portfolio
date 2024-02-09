@@ -1,23 +1,14 @@
-import { TbBrandNextjs } from 'react-icons/tb';
 import { motion } from 'framer-motion';
-import {
-  FaHtml5,
-  FaReact,
-  FaGitAlt,
-  FaCss3Alt,
-  FaNodeJs,
-  FaGithub,
-  FaFigma,
-} from 'react-icons/fa';
-import {
-  SiMongodb,
-  SiJest,
-  SiTailwindcss,
-  SiExpress,
-  SiJavascript,
-} from 'react-icons/si';
+import techStack from '@/techStack';
 
 const About = () => {
+  const skills = [
+    ...techStack.languages,
+    ...techStack.frontendDev,
+    ...techStack.backendDev,
+    ...techStack.database,
+    ...techStack.tools,
+  ];
   return (
     <section className='h-screen p-20 max-w-screen-2xl m-auto' id='about'>
       <h2 className='text-center mb-4 text-5xl font-bold pb-12'>About Me</h2>
@@ -56,10 +47,65 @@ const About = () => {
         </div>
         <div>
           <h3 className='pb-10 text-2xl font-medium text-center'>
-            SKILLS & LANGUAGES
+            I have experience with technologies such as:
           </h3>
+          <div>
+            <h4>Languages</h4>
+            <ul className='flex'>
+              {techStack.languages.map(lang => (
+                <li key={lang.name}>
+                  {lang.icon}
+                  <span>{lang.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4>Frontend Development</h4>
+            <ul className='flex'>
+              {techStack.frontendDev.map(stack => (
+                <li key={stack.name}>
+                  {stack.icon}
+                  <span>{stack.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4>Backend Development</h4>
+            <ul className='flex'>
+              {techStack.backendDev.map(stack => (
+                <li key={stack.name}>
+                  {stack.icon}
+                  <span>{stack.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4>Database</h4>
+            <ul className='flex'>
+              {techStack.database.map(stack => (
+                <li key={stack.name}>
+                  {stack.icon}
+                  <span>{stack.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4>Tools</h4>
+            <ul className='flex'>
+              {techStack.tools.map(stack => (
+                <li key={stack.name}>
+                  {stack.icon}
+                  <span>{stack.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
           <ul className='grid grid-cols-4 grid-rows-3 gap-5'>
-            {skills.map(skill => (
+            {/* {skills.map(skill => (
               <li
                 key={skill.name}
                 className='flex flex-col justify-center items-center'
@@ -67,7 +113,7 @@ const About = () => {
                 {skill.icon}
                 <span className='pointer-events-none font-jura'>{skill.name}</span>
               </li>
-            ))}
+            ))} */}
           </ul>
         </div>
       </div>
@@ -76,62 +122,6 @@ const About = () => {
 };
 
 export default About;
-
-const skills = [
-  {
-    icon: <FaHtml5 size={40} color='#f06529' />,
-    name: 'HTML',
-  },
-  {
-    icon: <FaCss3Alt size={40} color='#2965f1' />,
-    name: 'CSS',
-  },
-  {
-    icon: <SiJavascript size={40} color='#f0db4f' />,
-    name: 'JavaScript',
-  },
-  {
-    icon: <FaReact size={40} color='#88dded' />,
-    name: 'React',
-  },
-  {
-    icon: <TbBrandNextjs size={40} />,
-    name: 'NextJS',
-  },
-  {
-    icon: <SiTailwindcss size={40} color='#fd5af8' />,
-    name: 'TailwindCSS',
-  },
-  {
-    icon: <SiExpress size={40} />,
-    name: 'ExpressJS',
-  },
-  {
-    icon: <FaNodeJs size={40} color='#68a063' />,
-    name: 'NodeJS',
-  },
-  {
-    icon: <SiMongodb size={40} color='#3fa037' />,
-    name: 'MongoDB',
-  },
-  {
-    icon: <SiJest size={40} color='#ffce00' />,
-    name: 'Jest',
-  },
-  {
-    icon: <FaGithub size={40} color='#24292e' fill='white' />,
-    name: 'Github',
-  },
-  {
-    icon: <FaGitAlt size={40} color='#f1502f' />,
-    name: 'Git',
-  },
-  {
-    icon: <FaFigma size={40} />,
-    name: 'Figma',
-  },
-];
-
 {
   /* <p>
 I&apos;m a Frontend Web Developer building the Front-end of Websites and
