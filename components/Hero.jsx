@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <section
-      className='grid grid-cols-2 max-w-screen-2xl m-auto p-20 h-screen'
+      className='grid md:grid-cols-2 max-w-screen-2xl m-auto p-20 lg:mt-0 mt-12 lg:h-screen'
       id='home'
     >
       <div className='flex flex-col justify-center gap-2 pl-6'>
@@ -28,7 +28,7 @@ const Hero = () => {
             type: 'tween',
             transition: { duration: 1, delay: 0.6 },
           }}
-          className='pb-2 text-7xl font-bold'
+          className='pb-2 text-7xl font-bold mb-4'
         >
           Manjil Thapa.
         </motion.h1>
@@ -54,6 +54,7 @@ const Hero = () => {
             type: 'tween',
             transition: { duration: 1, delay: 1 },
           }}
+          className='mb-12 md:mb-0'
         >
           Feel free to reach out - I am excited to connect!
         </motion.p>
@@ -73,7 +74,7 @@ const Hero = () => {
           alt='hero'
           width={400}
           height={400}
-          className='m-auto'
+          className='m-auto rounded-sm'
         />
       </motion.div>
     </section>

@@ -4,9 +4,9 @@ const About = () => {
   return (
     <section className='lg:h-screen p-20 max-w-screen-2xl m-auto' id='about'>
       <h2 className='text-center mb-4 text-5xl font-bold pb-12'>About Me</h2>
-      <div className='grid grid-rows-2 lg:grid-cols-2 lg:gap-12'>
+      <div className='md:grid  lg:grid-cols-2 lg:gap-12'>
         <div className='h-full'>
-          <h3 className='pb-10 text-2xl font-medium lg:text-center'>What I do</h3>
+          <h3 className='pb-10 text-xl font-bold'>What I do</h3>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1, delay: 0.6 } }}
@@ -40,7 +40,7 @@ const About = () => {
           </motion.p>
         </div>
         <div>
-          <h3 className='mb-10 text-2xl font-medium lg:text-center lg:ml-0'>
+          <h3 className='mb-10 text-xl font-bold lg:ml-0'>
             I have experience with technologies such as:
           </h3>
           <TechStackList category='languages' />

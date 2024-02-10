@@ -7,7 +7,8 @@ import {
   FaNodeJs,
   FaGithub,
   FaFigma,
-} from 'react-icons/fa';
+  FaPython,
+} from 'react-icons/fa6';
 import {
   SiMongodb,
   SiJest,
@@ -24,14 +25,15 @@ const techStack = {
       { icon: <FaHtml5 size={30} color='#f06529' />, name: 'HTML' },
       { icon: <FaCss3Alt size={30} color='#2965f1' />, name: 'CSS' },
       { icon: <SiJavascript size={30} color='#f0db4f' />, name: 'JavaScript' },
+      { icon: <FaPython size={30} color='yellow' />, name: 'Python' },
     ],
   },
   frontend: {
     description: 'Frontend Development',
     items: [
+      { icon: <SiTailwindcss size={30} color='#fd5af8' />, name: 'TailwindCSS' },
       { icon: <FaReact size={30} color='#88dded' />, name: 'React' },
       { icon: <TbBrandNextjs size={30} />, name: 'NextJS' },
-      { icon: <SiTailwindcss size={30} color='#fd5af8' />, name: 'TailwindCSS' },
     ],
   },
   backend: {
@@ -52,7 +54,10 @@ const techStack = {
     description: 'Tools',
     items: [
       { icon: <FaGitAlt size={30} color='#f1502f' />, name: 'Git' },
-      { icon: <FaGithub size={30} color='#24292e' fill='white' />, name: 'Github' },
+      {
+        icon: <FaGithub size={30} />,
+        name: 'Github',
+      },
       { icon: <SiJest size={30} color='#ffce00' />, name: 'Jest' },
       { icon: <FaFigma size={30} />, name: 'Figma' },
     ],
@@ -60,7 +65,7 @@ const techStack = {
 };
 
 const TechStackList = ({ category }) => (
-  <div className='bg-sky-900 my-2 rounded-lg p-2 flex items-center gap-8'>
+  <div className='bg-sky-900 mb-2 rounded-lg py-2 px-4 flex items-center gap-8 lg:mx-0'>
     <h4 className='text-white text-lg'>{techStack[category].description + ' :'}</h4>
     <ul className='flex gap-6 my-2'>
       {techStack[category].items.map(item => (

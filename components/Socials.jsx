@@ -8,12 +8,12 @@ const Socials = () => {
       <ul>
         {socials.map(social => {
           return (
-            <li
-              key={social.title}
-              className='py-1 border-solid border-transparent border-2 max-w-min 
-              hover:translate-x-3.5 transition duration-150'
-            >
-              <Link href={social.href} target='_blank'>
+            <li key={social.title} className='m-2 border-none max-w-min'>
+              <Link
+                href={social.href}
+                target='_blank'
+                className='block hover:translate-x-3.5 transition duration-150'
+              >
                 {social.icon}
               </Link>
             </li>
@@ -33,9 +33,9 @@ const socials = [
     href: 'https://github.com/Manjil-Thapa',
   },
   {
-    title: 'facebook',
-    icon: <FaFacebookSquare size={40} color='#316FF6' />,
-    href: 'https://facebook.com/zilthapa/',
+    title: 'linkedIn',
+    icon: <FaLinkedin size={40} />,
+    href: 'https://au.linkedin.com/in/manjil-thapa-306654142',
   },
   {
     title: 'twitter',
@@ -43,8 +43,8 @@ const socials = [
     href: 'https://twitter.com/manjilthapa',
   },
   {
-    title: 'linkedIn',
-    icon: <FaLinkedin size={40} color='#0077b5' />,
-    href: 'https://au.linkedin.com/in/manjil-thapa-306654142',
+    title: 'facebook',
+    icon: <FaFacebookSquare size={40} />,
+    href: 'https://facebook.com/zilthapa/',
   },
 ];

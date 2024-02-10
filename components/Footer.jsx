@@ -30,7 +30,7 @@ const Footer = () => {
         </Link>
       </h4>
       <div className='flex justify-center items-center gap-1'>
-        <PiCopyrightThin /> Copyright
+        Built with NextJS and TailwindCSS <PiCopyrightThin />
         <h4>{currentYear}</h4>
       </div>
     </footer>

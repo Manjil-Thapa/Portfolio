@@ -22,6 +22,9 @@ module.exports = {
         jura: ['var(--font-jura)'],
         'work-sans': ['var(--font-work-sans)'],
       },
+      fontSize: {
+        clamp: 'clamp(1rem, 5vw, 1.2rem)',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

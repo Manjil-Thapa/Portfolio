@@ -1,6 +1,5 @@
-import { FaFigma, FaHtml5, FaCss3Alt } from 'react-icons/fa';
 import { SiExpress, SiJavascript, SiMongodb, SiMapbox } from 'react-icons/si';
-import { FaReact } from 'react-icons/fa6';
+import { FaReact, FaFigma, FaHtml5, FaCss3Alt } from 'react-icons/fa6';
 import React from 'react';
 
 export const featuredProjects = [
