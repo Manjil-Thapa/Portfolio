@@ -29,18 +29,8 @@ const Footer = () => {
           Manjil Thapa
         </Link>
       </h4>
-      <p>
-        Inspired by
-        <Link
-          href='https://v4.brittanychiang.com/'
-          target='_blank'
-          className='pr-2 ml-1'
-        >
-          Brittany Chiang
-        </Link>
-      </p>
       <div className='flex justify-center items-center gap-1'>
-        <PiCopyrightThin />
+        <PiCopyrightThin /> Copyright
         <h4>{currentYear}</h4>
       </div>
     </footer>

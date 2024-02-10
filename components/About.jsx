@@ -2,43 +2,45 @@ import { motion } from 'framer-motion';
 import TechStackList from './data/TechStackList';
 const About = () => {
   return (
-    <section className='h-screen p-20 max-w-screen-2xl m-auto' id='about'>
+    <section className='lg:h-screen p-20 max-w-screen-2xl m-auto' id='about'>
       <h2 className='text-center mb-4 text-5xl font-bold pb-12'>About Me</h2>
-      <div className='grid grid-cols-2 gap-12'>
+      <div className='grid grid-rows-2 lg:grid-cols-2 lg:gap-12'>
         <div className='h-full'>
-          <h3 className='pb-10 text-2xl font-medium text-center'>What I do</h3>
+          <h3 className='pb-10 text-2xl font-medium lg:text-center'>What I do</h3>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1, delay: 0.6 } }}
-            className='text-xl leading-relaxed pb-5'
+            className='text-xl leading-relaxed pb-5 lg:mx-0'
           >
-            Hi, I&apos;m Manjil. I am a Frontend Developer based in Brisbane, QLD. I
-            enjoy being given challenging, visually-pleasing designs and making them
-            a reality. The process of tearing an idea down into its smallest
-            components, learning, and figuring out how to put those pieces together,
-            all while making it performant, excites me.
+            I am a self-taught web developer with a focus on the frontend development
+            and specialized in the MERN stack, with a proficiency in crafting
+            innovative web applications and integrating reliable APIs. I am a
+            lifelong learner, driven, and well-versed in RESTful architecture,
+            consistently striving for clean, structured, and maintainable code.
           </motion.p>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1, delay: 0.6 } }}
-            className='text-xl leading-relaxed pb-5'
+            className='text-xl leading-relaxed pb-5 lg:mx-0'
           >
-            Right now, I&apos;m working as a frontend engineer at Nebo, an
-            advertising agency based in Atlanta, where I contribute to building
-            accessible, human-centered projects.
+            I derive satisfaction from transforming ideas into tangible, useful
+            products, exercising my creativity in the process. My expertise lies in
+            building scalable applications, and I am passionate about staying updated
+            on new technologies.
           </motion.p>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1, delay: 0.6 } }}
-            className='text-xl leading-relaxed pb-5'
+            className='text-xl leading-relaxed mb-12 lg:mx-0 lg:mb-5'
           >
-            Apart from web development, I do cinematography and make short cinematic
-            music videos on YouTube. It&apos;s very fulfilling for me and has given a
-            creative-outlet to my avocation.
+            As a highly disciplined individual, I adapt well to learning newer
+            technologies and aspire to pursue a career that allows me to channel my
+            creativity into crafting beautiful software and engaging experiences.
+            Currently, I am learning TypeScript to become a better developer.
           </motion.p>
         </div>
         <div>
-          <h3 className='pb-10 text-2xl font-medium text-center'>
+          <h3 className='mb-10 text-2xl font-medium lg:text-center lg:ml-0'>
             I have experience with technologies such as:
           </h3>
           <TechStackList category='languages' />
@@ -46,7 +48,6 @@ const About = () => {
           <TechStackList category='backend' />
           <TechStackList category='database' />
           <TechStackList category='tools' />
-          <ul className='grid grid-cols-4 grid-rows-3 gap-5'></ul>
         </div>
       </div>
     </section>
