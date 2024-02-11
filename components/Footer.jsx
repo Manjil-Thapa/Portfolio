@@ -24,13 +24,23 @@ const Footer = () => {
         <Link
           href='https://github.com/Manjil-Thapa'
           target='_blank'
-          className='ml-1 hover:text-cyan-300 font-jura'
+          className='ml-1 hover:text-white'
         >
           Manjil Thapa
         </Link>
       </h4>
+      <h4>
+        Portfolio inspired by
+        <Link
+          href='https://v4.brittanychiang.com/'
+          target='_blank'
+          className='pl-1 hover:text-white'
+        >
+          Brittany Chiang
+        </Link>
+      </h4>
       <div className='flex justify-center items-center gap-1'>
-        Built with NextJS and TailwindCSS <PiCopyrightThin />
+        <PiCopyrightThin />
         <h4>{currentYear}</h4>
       </div>
     </footer>

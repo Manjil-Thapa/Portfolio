@@ -91,7 +91,7 @@ const Project = ({ project, index }) => {
             <Link href={project.link} target='_blank'>
               <FaGithub size={25} title='Github' />
             </Link>
-            <Link href='https://github.com/Manjil-Thapa' target='_blank'>
+            <Link href={project.live} target='_blank'>
               <BiLinkExternal size={25} title='Live version' />
             </Link>
           </div>
